@@ -1,14 +1,14 @@
 # Pinboard
 
-This is the Introduction to Ruby on Rails project course. Third course project of the *EPFL Extension School* **Web Application Development Program**
+This is the ***Introduction to Ruby on Rails*** project course. Third course project of the *EPFL Extension School* **Web Application Development Program**
 
 ## Project Goals
 
 ### General notes
 
-A User indicates someone who _has_ identified themselves within the application by registering and logging in.
+A *Use*r indicates someone who _has_ identified themselves within the application by registering and logging in.
 
-A Visitor indicates anyone visiting the website that has not identified themselves by registering and logging in _as well as_ Users.
+A *Visitor* indicates anyone visiting the website that has not identified themselves by registering and logging in _as well as_ Users.
 
 ### Option 1: Pin you images
 
@@ -29,7 +29,7 @@ Implement the following features in your application, that allow:
 11. Visitors to have a link to the homepage, the about page, and the login/register view in the header of every view.
 12. Users to have a link to the homepage, the about page, and their personal pin list in the header of every view.
 
-#### Project requirements
+## Project requirements
 
 The outlines above don't go into as much detail as previous course projects: this is to assess your ability to interpret the project brief and create the appropriate models, controllers, views, and routes based on the guidelines below. In particular, the project submission must demonstrate all aspects of developing with the Ruby on Rails framework taught in this course, including:
 

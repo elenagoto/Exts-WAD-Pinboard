@@ -47,8 +47,7 @@ body {
 * TYPOGRAPHY
  ================================ */
 a, p, ul, ol, span, label {
-  font-size: 1.5rem;
-  /* 15px/10px */
+  font-size: 1.6rem;
   line-height: 1.6; }
 
 h1, h2, h3, h4, h5, h6
@@ -274,7 +273,7 @@ a {
 @media screen and (min-width: 600px) {
   .input--horizontal {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: baseline; } }
 
 .input--horizontal .checkbox-main {
@@ -820,9 +819,6 @@ main {
   @media screen and (min-width: 600px) {
     .form__container {
       width: 80%; } }
-  @media screen and (min-width: 800px) {
-    .form__container {
-      width: 70%; } }
 
 .form {
   display: flex;
@@ -832,12 +828,18 @@ main {
   width: 100%; }
   .form__text {
     color: #bbc1c6; }
+  @media screen and (min-width: 600px) {
+    .form--create .input__field {
+      width: 85%; } }
 
 .input__description {
   margin: -3rem 0 1.6rem 0; }
 
 .input--horizontal .prompt {
   width: 100%; }
+  @media screen and (min-width: 600px) {
+    .input--horizontal .prompt {
+      width: 85%; } }
   .input--horizontal .prompt .btn {
     width: 100%; }
 
@@ -862,6 +864,7 @@ main {
 
 .alert {
   color: #dd3e1f;
+  font-size: 2rem;
   padding: 1.6rem 0; }
 
 /* ==============================

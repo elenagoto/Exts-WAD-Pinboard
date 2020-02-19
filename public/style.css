@@ -570,6 +570,9 @@ a {
     content: " ";
     clear: both; }
   @media screen and (min-width: 600px) {
+    .cards {
+      justify-content: flex-start; } }
+  @media screen and (min-width: 600px) {
     .cards .card {
       float: left;
       width: calc(50% - (1.6rem * 1.5)); } }
@@ -781,6 +784,8 @@ main {
 .main__header {
   margin: 0 0 3.2rem 0;
   width: 100vw; }
+  .main__header .content-wrapper {
+    display: flex; }
 
 /* MAIN CONTENT */
 .main__content {
@@ -828,6 +833,12 @@ main {
   @media screen and (min-width: 600px) {
     .form--create .input__field {
       width: 90%; } }
+  @media screen and (min-width: 600px) {
+    .form--login {
+      width: 80%; } }
+  @media screen and (min-width: 800px) {
+    .form--login {
+      width: 70%; } }
 
 .input__description {
   margin: -3rem 0 1.6rem 0; }

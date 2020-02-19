@@ -1,16 +1,15 @@
 <li class="card">
-  <img src="https://s3fs.paintnite.com/yaymaker-images/nite-out/566x566/70/10004350-kois-will-be-kois.jpg"
-    alt="Northern lights above a house at night" />
+  <%= image_tag image_url, alt: 'Pin image' %>
   <a class="card__thumb" href="ideas/see-northen-lights.html">
     <div class="card__intro card--show">
-      <h3 class="card__title">This is a very long title that I want to try on the layout.</h3>
+      <h3 class="card__title"> <%= title %> </h3>
     </div>
   </a>
   <div class="card__form">
     <form class="card__footer card--show" action="idea" method="post">
       <button class="btn btn--cta"type="submit" name="action" value="addGoal">
         <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-          <use xlink:href="images/icons/icons-defs.svg#pin"></use>
+          <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#pin") %>"></use>
         </svg>
         Pin it
       </button>

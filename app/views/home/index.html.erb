@@ -17,111 +17,17 @@
       <div class="main__content">
         <div class="content-wrapper">
           <ul class="bare-list cards">
-            <%= render partial: 'pin_card', locals: { title: 'See the northen lights.',
-                                                      image_url: 'https://s3fs.paintnite.com/yaymaker-images/nite-out/566x566/70/10004350-kois-will-be-kois.jpg'} %>
-  
-            <li class="card">
-              <img src="https://i.pinimg.com/564x/d6/4c/85/d64c85163121ab479279202038a78c22.jpg"
-                alt="Northern lights above a house at night" />
-              <a class="card__thumb" href="ideas/see-northen-lights.html">
-                <div class="card__intro card--show">
-                  <h3 class="card__title">See the northen lights.</h3>
-                </div>
-              </a>
-              <div class="card__form">
-                <form class="card__footer card--show" action="idea" method="post">
-                  <button class="btn btn--cta" type="submit" name="action" value="addGoal">
-                    <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-                      <use xlink:href="images/icons/icons-defs.svg#pin"></use>
-                    </svg>
-                    Pin it
-                  </button>
-                </form>
-              </div>
-            </li>
-  
-            <li class="card">
-              <img
-                src="http://3.bp.blogspot.com/-49QZFZh2vDc/Tz02c7-bLEI/AAAAAAAAB2k/OJwj3M-zJKc/s1600/Minervois+Vineyards+12x18+2003.jpg"
-                alt="Northern lights above a house at night" />
-              <a class="card__thumb" href="ideas/see-northen-lights.html">
-                <div class="card__intro card--show">
-                  <h3 class="card__title">See the northen lights.</h3>
-                </div>
-              </a>
-              <div class="card__form">
-                <form class="card__footer card--show" action="idea" method="post">
-                  <button class="btn btn--cta" type="submit" name="action" value="addGoal">
-                    <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-                      <use xlink:href="images/icons/icons-defs.svg#pin"></use>
-                    </svg>
-                    Pin it
-                  </button>
-                </form>
-              </div>
-            </li>
-  
-            <li class="card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/1/10/Van_Gogh_-_Country_road_in_Provence_by_night.jpg"
-                alt="Northern lights above a house at night" />
-              <a class="card__thumb" href="ideas/see-northen-lights.html">
-                <div class="card__intro card--show">
-                  <h3 class="card__title">See the northen lights.</h3>
-                </div>
-              </a>
-              <div class="card__form">
-                <form class="card__footer card--show" action="idea" method="post">
-                  <button class="btn btn--cta" type="submit" name="action" value="addGoal">
-                    <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-                      <use xlink:href="images/icons/icons-defs.svg#pin"></use>
-                    </svg>
-                    Pin it
-                  </button>
-                </form>
-              </div>
-            </li>
-  
-            <li class="card">
-              <img src="https://cdn.colombia.com/sdi/2014/08/15/d66edbad59cf49cfb61029fb676fe533.jpg"
-                alt="Northern lights above a house at night" />
-              <a class="card__thumb" href="ideas/see-northen-lights.html">
-                <div class="card__intro card--show">
-                  <h3 class="card__title">See the northen lights.</h3>
-                </div>
-              </a>
-              <div class="card__form">
-                <form class="card__footer card--show" action="idea" method="post">
-                  <button class="btn btn--cta" type="submit" name="action" value="addGoal">
-                    <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-                      <use xlink:href="images/icons/icons-defs.svg#pin"></use>
-                    </svg>
-                    Pin it
-                  </button>
-                </form>
-              </div>
-            </li>
-  
-            <li class="card">
-              <img
-                src="http://4.bp.blogspot.com/-YfOFOFvXKFg/Vp-R8C7IrvI/AAAAAAABZ-0/Jp6-jSxppGo/s1600/1994the30daysfaxpainting-vi.jpg"
-                alt="Northern lights above a house at night" />
-              <a class="card__thumb" href="ideas/see-northen-lights.html">
-                <div class="card__intro card--show">
-                  <h3 class="card__title">See the northen lights.</h3>
-                </div>
-              </a>
-              <div class="card__form">
-                <form class="card__footer card--show" action="idea" method="post">
-                  <button class="btn btn--cta" type="submit" name="action" value="addGoal">
-                    <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-                      <use xlink:href="images/icons/icons-defs.svg#pin"></use>
-                    </svg>
-                    Pin it
-                  </button>
-                </form>
-              </div>
-            </li>
+            <% ['https://s3fs.paintnite.com/yaymaker-images/nite-out/566x566/70/10004350-kois-will-be-kois.jpg',
+                'https://i.pinimg.com/564x/d6/4c/85/d64c85163121ab479279202038a78c22.jpg',
+                'http://3.bp.blogspot.com/-49QZFZh2vDc/Tz02c7-bLEI/AAAAAAAAB2k/OJwj3M-zJKc/s1600/Minervois+Vineyards+12x18+2003.jpg',
+                'https://upload.wikimedia.org/wikipedia/commons/1/10/Van_Gogh_-_Country_road_in_Provence_by_night.jpg',
+                'https://cdn.colombia.com/sdi/2014/08/15/d66edbad59cf49cfb61029fb676fe533.jpg',
+                'http://4.bp.blogspot.com/-YfOFOFvXKFg/Vp-R8C7IrvI/AAAAAAABZ-0/Jp6-jSxppGo/s1600/1994the30daysfaxpainting-vi.jpg'].each do |image_url| %>
+
+              <%= render partial: 'pin_card', locals: { title: 'See the northen lights.',
+                                                      image_url: image_url} %>
+
+            <% end %>
           </ul>
         </div>
       </div>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinboard</title>
+  <!--[if !IE]><!-->
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!--<![endif]-->
+  <!--[if IE]>
+      <link rel="stylesheet" href="assets/css/universal-ie6.css">
+    <![endif]-->
+</head>
+
+<body>
+  <!-- START Header -->
+  <header class="banner">
+    <div class="global-header">
+      <div class="content-wrapper">
+        <div class="logo">
+          <a href="/"><span>P<img src="images/pinboard_logo.svg" alt="Pinboard Logo">nboard</a>
+        </div>
+        <form class="search search--cta" action="ideas" method="get">
+          <label for="global-search" class="search__label sr-only">Search</label>
+          <div class="search__row">
+            <input id="global-search" class="search__field" type="text" name="search"
+              placeholder="e.g. Swimming with dolphins" />
+            <button class="btn btn--cta" type="submit">
+              <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+                <use xlink:href="images/icons/icons-defs.svg#search"></use>
+              </svg>
+              Search
+            </button>
+          </div>
+        </form>
+        <nav>
+          <ul class="global-nav bare-list">
+            <li><a href="login.html">Login/Register</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- END Header -->
+  <!-- START Main -->
+  <main class="main">
+    <!-- Masthead -->
+    <div class="masthead">
+      <div class="content-wrapper">
+        <div class="masthead__text">
+        </div>
+      </div>
+    </div>
+    <!-- END Masthead -->
+    <div class="main__header">
+      <div class="content-wrapper">
+        <!-- Start Pin -->
+        <div class="goal">
+          <div class="goal__img">
+            <img
+              src="http://3.bp.blogspot.com/-49QZFZh2vDc/Tz02c7-bLEI/AAAAAAAAB2k/OJwj3M-zJKc/s1600/Minervois+Vineyards+12x18+2003.jpg"
+              alt="Sea turtle swimming in blue sea">
+          </div>
+          <div class="goal__content">
+            <div class="goal__owner">
+              <img class="avatar avatar-small" src="../images/avatar.png" alt="Big blue avatar" />
+              <span>Created by <a href="#">John Smith</a></span>
+            </div>
+            <div class="goal__title">
+              <h1 class="beta">Swim with a sea turtle</h1>
+            </div>
+            <div class="goal__btn">
+              <button class="btn btn--icon btn--cta" type="submit" name="action" value="#">
+                <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+                  <use xlink:href="images/icons/icons-defs.svg#pin"></use>
+                </svg>
+                Pin
+              </button>
+              <button class="btn btn--icon btn--cta" type="submit" name="action" value="#">
+                <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+                  <use xlink:href="images/icons/icons-defs.svg#edit"></use>
+                </svg>
+                Edit
+              </button>
+            </div>
+            <div class="goal__description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid praesentium blanditiis vitae id
+                repellat aut
+                reprehenderit. Officiis nisi laborum ullam ducimus laudantium esse.</p>
+            </div>
+            <div class="goal__stats">
+              <div class="stats__likes">
+                <span>592 likes</span>
+              </div>
+              <div class="stats__doing">
+                <span>1,148 doing this</span>
+              </div>
+              <div class="stats__comments"><a href="#">3 comments</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__content">
+      <div class="content-wrapper">
+        <!-- START Discussion -->
+        <div class="discussion">
+          <div class="comments comments__title">
+            <h2>Discussion</h2>
+            <span class="comments__number">3 comments</span>
+          </div>
+          <div class="comments comments--add">
+            <div class="comments__avatar">
+              <img class="avatar" src="../images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <form class="input input--textarea" action="add-comment" method="POST">
+                <label class="input__label" for="add-comment">Add a comment</label>
+                <textarea class="input__field" id="add-comment" name="add-comment"></textarea>
+                <button class="btn btn--cta" type="submit" name="action" value="#">
+                  Post
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="comments comments--display">
+            <div class="comments__avatar">
+              <img class="avatar" src="../images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <div class="comments__user">
+                <span class="user__name"><a href="#">William Barnes</a> <span class="comments__time">25 minutes
+                    ago</span>
+                </span>
+              </div>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quis saepe et dignissimos beatae.
+              </p>
+            </div>
+          </div>
+          <div class="comments comments--display">
+            <div class="comments__avatar">
+              <img class="avatar" src="../images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <div class="comments__user">
+                <span class="user__name"><a href="#">Todd Carey</a> <span class="comments__time">3 days ago</span>
+                </span>
+              </div>
+              <p>Eveniet perspiciatis quas, cupiditate earum, veritatis consequuntur tempora, facilis nemo molestias
+                ex nostrum animi!</p>
+            </div>
+          </div>
+          <div class="comments comments--display">
+            <div class="comments__avatar">
+              <img class="avatar" src="../images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <div class="comments__user">
+                <span class="user__name"><a href="#">Jennifer Douglas</a> <span class="comments__time">1 week
+                    ago</span>
+                </span>
+              </div>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, a harum? </p>
+            </div>
+          </div>
+        </div>
+        <!-- END Discussion -->
+      </div>
+    </div>
+  </main>
+  <!-- END Main -->
+  <!-- START Footer -->
+  <footer class="global-footer">
+    <div class="content-wrapper">
+      <div class="nav-footer">
+        <div class="logo logo--invert"><a href="/"><span>P<img src="images/pinboard_logo.svg"
+                alt="Pinboard Logo">nboard</a></div>
+        <p>2020 &copy; <a href="https://elenagoto.ch/">Laura Elena Gómez</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- END Footer -->
+  <!-- START Script -->
+  <script src="script.js"></script>
+  <!-- END Script -->
+</body>
+
+</html>

@@ -816,9 +816,6 @@ main {
   display: flex;
   margin-bottom: 3rem;
   width: 100%; }
-  @media screen and (min-width: 600px) {
-    .form__container {
-      width: 80%; } }
 
 .form {
   display: flex;
@@ -830,7 +827,7 @@ main {
     color: #bbc1c6; }
   @media screen and (min-width: 600px) {
     .form--create .input__field {
-      width: 85%; } }
+      width: 90%; } }
 
 .input__description {
   margin: -3rem 0 1.6rem 0; }
@@ -839,7 +836,7 @@ main {
   width: 100%; }
   @media screen and (min-width: 600px) {
     .input--horizontal .prompt {
-      width: 85%; } }
+      width: 90%; } }
   .input--horizontal .prompt .btn {
     width: 100%; }
 
@@ -864,7 +861,6 @@ main {
 
 .alert {
   color: #dd3e1f;
-  font-size: 2rem;
   padding: 1.6rem 0; }
 
 /* ==============================

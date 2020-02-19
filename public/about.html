@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--[if !IE]><!-->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600i,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
   <!--<![endif]-->
   <!--[if IE]>
     <link rel="stylesheet" href="assets/css/universal-ie6.css">
   <![endif]-->
+  <script src="assets/js/modernizr-custom.js"></script>
   <title>Pinboard | About</title>
 </head>
 <!-- START Body -->
@@ -21,7 +22,7 @@
     <div class="global-header">
       <div class="content-wrapper">
         <div class="logo">
-          <a href="/"><span>P<img src="images/pinboard_logo.svg" alt="Pinboard Logo">nboard</a>
+          <a href="/"><span>P<img src="assets/images/pinboard_logo.svg" alt="Pinboard Logo">nboard</a>
         </div>
       </div>
     </div>
@@ -46,30 +47,33 @@
     </div>
     <div class="main__content">
       <div class="content-wrapper">
-        <p>This application allows people to create a virtual pinboard for images and photos that they find online. It will be a similar but more basic experience to the popular website <a href="https://www.pinterest.ch/">Pinterest</a></p>
-        <h3>Goals:</h3>
-        <p>Visitors should be allowed to:</p>
-        <ul>
-          <li>open a simple static About page, that includes the title of the project option, a brief description of what the website is for and who built it.</li>
-          <li>register and log in as a User with their email using a basic sign up and log in form.</li>
-          <li>to view the six most-recently created Pins on the homepage.</li>
-          <li>to search for Pins with a search term that will match on either title or tag from a form on the homepage.</li>
-          <li>to view all of the details for a Pin plus all Comments related to that Pin on one view.</li>
-          <li>to have a link to the homepage, the about page, and the login/register view in the header of every view.</li>
-        </ul>
-        <p>And the Users (registred visitors) should be allowed to:</p>
-        <ul>
-          <li>to create Pins that include a title, an url for the image that they want to “pin", and a tag, which is a phrase or category relevant to the Pin.</li>
-          <li>to edit all details of a Pin by clicking on a link from the “Show pin” view.</li>
-          <li>to save new or updated Pins only if a title is provided, and that a tag is no longer than 30 characters in length, although a tag is optional. Any validation errors should be displayed helpfully for User</li>
-          <li>to add a comment on a “show pin” view when they are signed in</li>
-          <li>to add any Pin created by any User to their "personal Pin list" from the show Pin view.</li>
-          <li>to have a link to the homepage, the about page, and their personal pin list in the header of every view.</li>
-        </ul>
-        <p>This application has been developped by <a href="https://elenagoto.ch">Laura Elena Gómez</a> as a final
-          project for the course <em>Introduction to Ruby on Rails</em>. This is the third course of the EPFL Extension School <a
-            href="https://www.extensionschool.ch/web-application-development">Web Application Development Program</a>
-            </p>
+        <div class="about_text">
+
+          <p>This application allows people to create a virtual pinboard for images and photos that they find online. It will be a similar but more basic experience to the popular website <a href="https://www.pinterest.ch/">Pinterest</a></p>
+          <h3>Goals:</h3>
+          <p>Visitors should be allowed to:</p>
+          <ul>
+            <li>open a simple static About page, that includes the title of the project option, a brief description of what the website is for and who built it.</li>
+            <li>register and log in as a User with their email using a basic sign up and log in form.</li>
+            <li>to view the six most-recently created Pins on the homepage.</li>
+            <li>to search for Pins with a search term that will match on either title or tag from a form on the homepage.</li>
+            <li>to view all of the details for a Pin plus all Comments related to that Pin on one view.</li>
+            <li>to have a link to the homepage, the about page, and the login/register view in the header of every view.</li>
+          </ul>
+          <p>And the Users (registred visitors) should be allowed to:</p>
+          <ul>
+            <li>to create Pins that include a title, an url for the image that they want to “pin", and a tag, which is a phrase or category relevant to the Pin.</li>
+            <li>to edit all details of a Pin by clicking on a link from the “Show pin” view.</li>
+            <li>to save new or updated Pins only if a title is provided, and that a tag is no longer than 30 characters in length, although a tag is optional. Any validation errors should be displayed helpfully for User</li>
+            <li>to add a comment on a “show pin” view when they are signed in</li>
+            <li>to add any Pin created by any User to their "personal Pin list" from the show Pin view.</li>
+            <li>to have a link to the homepage, the about page, and their personal pin list in the header of every view.</li>
+          </ul>
+          <p>This application has been developped by <a href="https://elenagoto.ch">Laura Elena Gómez</a> as a final
+            project for the course <em>Introduction to Ruby on Rails</em>. This is the third course of the EPFL Extension School
+            <a href="https://www.extensionschool.ch/web-application-development">Web Application Development Program</a>
+          </p>
+        </div>
       </div>
     </div>
   </main>
@@ -78,13 +82,15 @@
   <footer class="global-footer">
     <div class="content-wrapper">
       <div class="nav-footer">
-        <div class="logo logo--invert"><a href="/"><span>P<img src="images/pinboard_logo.svg"
+        <div class="logo logo--invert"><a href="/"><span>P<img src="assets/images/pinboard_logo.svg"
                 alt="Pinboard Logo">nboard</a></div>
       <p>2020 &copy; <a href="https://elenagoto.ch/">Laura Elena Gómez</a></p>
       </div>
     </div>
   </footer>
   <!-- END Footer -->
+  <!-- START Script -->
+  <!-- END Script -->
 </body>
 <!-- End Body -->
 </html>

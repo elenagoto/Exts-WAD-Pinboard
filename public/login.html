@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinboard</title>
+  <!--[if !IE]><!-->
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!--<![endif]-->
+  <!--[if IE]>
+      <link rel="stylesheet" href="assets/css/universal-ie6.css">
+    <![endif]-->
+</head>
+
+<body>
+  <!-- START Header -->
+  <header class="banner">
+    <div class="global-header">
+      <div class="content-wrapper">
+        <div class="logo">
+          <a href="/"><span>P<img src="images/pinboard_logo.svg" alt="Pinboard Logo">nboard</a>
+        </div>
+        <form class="search search--cta" action="ideas" method="get">
+          <label for="global-search" class="search__label sr-only">Search</label>
+          <div class="search__row">
+            <input id="global-search" class="search__field" type="text" name="search"
+              placeholder="e.g. Swimming with dolphins" />
+            <button class="btn btn--cta" type="submit">
+              <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+                <use xlink:href="assets/images/icons/icons-defs.svg#search"></use>
+              </svg>
+              Search
+            </button>
+          </div>
+        </form>
+        <nav>
+          <ul class="global-nav bare-list">
+            <li><a href="login.html">Login/Register</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- END Header -->
+  <!-- START Main -->
+  <main class="main">
+    <!-- Masthead -->
+    <div class="masthead">
+      <div class="content-wrapper">
+        <div class="masthead__text">
+          <h1>Register or Login</h1>
+        </div>
+      </div>
+    </div>
+    <!-- END Masthead -->
+    <div class="main__header">
+      <div class="content-wrapper">
+        <h2></h2>
+      </div>
+    </div>
+    <div class="main__content">
+      <div class="content-wrapper">
+        <!-- START From Sign in -->
+        <div class="alert alert--wide">
+          <p>Incorrect email/password combination.</p>
+        </div>
+        <div class="form__container">
+            <form class="form" action="log-in.html" method="post">
+              <div class="input">
+                <label for="email" class="input__label">Email</label>
+                <div>
+                  <input id="email" class="input__field" type="email" name="email"
+                  placeholder="e.g. diana.prince@wonder.com" required>
+                </div>
+              </div>
+              <div class="form__text input__btn--alone">
+                <div class="prompt">
+                  <button class="btn btn--cta prompt__confirm" type="submit">Log in</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+      <!-- END From Sign in -->
+    </div>
+  </main>
+  <!-- END Main -->
+  <!-- START Footer -->
+  <footer class="global-footer">
+    <div class="content-wrapper">
+      <div class="nav-footer">
+        <div class="logo logo--invert"><a href="/"><span>P<img src="images/pinboard_logo.svg"
+                alt="Pinboard Logo">nboard</a></div>
+        <p>2020 &copy; <a href="https://elenagoto.ch/">Laura Elena Gómez</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- END Footer -->
+  <!-- START Script -->
+  <script src="script.js"></script>
+  <!-- END Script -->
+</body>
+
+</html>

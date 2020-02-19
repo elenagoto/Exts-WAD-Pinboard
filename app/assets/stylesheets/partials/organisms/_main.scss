@@ -1,0 +1,57 @@
+/* ==============================
+ * MAIN
+================================= */
+main {
+flex: 1 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  &--index h2 {
+    @include tablet {
+        text-align: center;
+    }
+  }
+
+  .content-wrapper {
+    flex: 1 0 auto;
+  }
+}
+
+/* MAIN HEADER */
+.main__header {
+  margin: 0 0 ($pulse * 2) 0;
+  width: 100vw;
+
+  .content-wrapper {
+    display: flex;
+  }
+}
+
+/* MAIN CONTENT */
+
+.main__content {
+  margin: 0 0 ($pulse * 3) 0;
+  width: 100vw;
+
+  // h3 {
+  //   margin: ($pulse * 2) 0 $pulse;
+  // }
+  p {
+    margin: $pulse 0;
+  }
+  ul {
+    padding: $pulse 0;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}

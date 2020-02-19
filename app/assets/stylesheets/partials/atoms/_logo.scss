@@ -1,0 +1,20 @@
+/* ==============================
+* LOGO
+================================= */
+
+.logo  {
+  span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $black;
+    white-space: nowrap;
+
+    img {
+      height: 2.2rem;
+    }
+  }
+  
+  &--invert span {
+    color: $white;
+  }
+}

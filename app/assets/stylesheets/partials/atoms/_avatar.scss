@@ -1,0 +1,13 @@
+/* ==============================
+* AVATAR
+================================= */
+.avatar {
+  border-radius: 50%;
+  width: ($pulse * 3);
+  height: ($pulse * 3);
+}
+
+.avatar-small {
+  width: ($pulse * 2);
+  height: ($pulse * 2);
+}

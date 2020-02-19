@@ -1,0 +1,67 @@
+/* ==============================
+ * GOAL 
+================================= */
+.goal {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+  border-radius: 2rem;
+
+  &__content {
+    padding: $pulse;
+
+    & > * {
+      margin-bottom: $pulse;
+    }
+  } 
+
+  &__btn, &__tags {
+    margin-right: ($pulse * -1);
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      border-radius: 2rem;
+      margin: $pulse;
+      width: 100%;
+  }
+}
+
+  @include tablet {
+    &::after {
+      display: table;
+      content: " ";
+      clear: both;
+    }
+
+    &__img {
+      float: left;
+      width: 48%;
+    }
+    &__content {
+      float: right;
+      width: 48%;
+    }
+  }
+}
+
+/* Enhancement */
+.goal {
+  @supports (display: flex) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @include tablet {
+      &__img {
+        float: none;
+      }
+
+      &__content {
+        float: none;
+      }
+      flex-direction: row;
+    }
+  }
+}

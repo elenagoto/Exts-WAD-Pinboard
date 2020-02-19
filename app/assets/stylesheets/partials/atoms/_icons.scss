@@ -1,0 +1,21 @@
+/* ==============================
+* ICONS
+================================= */
+
+.icon {
+  padding-right: 0.3em;
+  fill: $gray-3;
+
+  .btn:hover &,
+  .btn:active &,
+  .btn:focus & {
+    fill: currentColor;
+  }
+
+  &--liked {
+    fill: $alert-color;
+  }
+  &--cta {
+    fill: currentColor;
+  }
+}

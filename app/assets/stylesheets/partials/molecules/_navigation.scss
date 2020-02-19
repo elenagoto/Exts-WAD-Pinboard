@@ -1,0 +1,97 @@
+/* ==============================
+* NAVIGATION
+================================= */
+
+/* Global Header Navigation */
+.global-nav {
+  float: right;
+  margin-left: -1em;
+  display: flex;
+
+  > li {
+    float: left;
+    list-style-type: none;
+    margin: 0 0 0 $pulse;
+    padding: $pulse 0;
+  }
+
+  a {
+    color:$black;
+
+    &:hover, &:focus {
+      color: $primary-color;
+    }
+  }
+}
+
+/* Masthead Navigation */
+.masthead__nav {
+  margin-top: 2rem;
+  padding: 0;
+  align-self: flex-start;
+
+  @include tablet {
+    float: left;
+  }
+
+  li {
+    // padding: 0 0 $pulse 0;
+    @include tablet {
+      display: inline-block;
+      padding: 0;
+    }
+  }
+
+  a {
+    margin: 2rem $pulse -1px 0;
+
+    @include tablet {
+      display: block;
+      margin: 0 $pulse -1px 0;
+      padding: 0 0.5rem 2.5rem;
+    }
+
+    &:hover, &:focus {
+      border-bottom: 1px solid $black;
+    }
+  }
+
+  .current  {
+    a {
+      color: $black;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+/* Footer Navigation */
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+
+  .logo {
+    padding: $pulse $pulse $pulse 0 ;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: $pulse;
+  }
+
+  li {
+    padding-right: $pulse;
+    white-space: nowrap;
+  }
+
+  a {
+    color: $primary-color;
+
+    &:hover, &:focus {
+      color: $secondary-color;
+    }
+  }
+}

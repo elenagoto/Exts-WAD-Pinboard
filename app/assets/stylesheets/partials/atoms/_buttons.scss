@@ -1,0 +1,88 @@
+/* ==============================
+* BUTTONS
+================================= */
+
+.btn {
+  font-size: 1.3rem;
+  line-height: 1;
+  background: $white;
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $pulse;
+  margin: 0;
+
+  border: 1px solid $gray-4;
+  border-radius: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    background-color: $gray-4;
+    color: $primary-color;
+  }
+}
+
+.btn--icon {
+  color: $gray-1; 
+
+  .icon {
+    fill: currentColor;
+  }
+} 
+
+.btn--cta{
+  background-color: $primary-color;
+  color: $white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    // background-color: darken($primary-color, 20);
+    // border-color: darken($primary-color, 15);
+  }
+}
+
+.btn--warning {
+  &:hover,
+  &:active,
+  &:focus{
+    color: $white;
+    text-decoration: none;
+    background-color: $alert-color;
+    border-color: $alert-color;
+  }
+}
+
+.btn--tag {
+  background-color: $gray-4;
+  color: $gray-1;
+  border: 1px solid $gray-4;
+  &:hover,
+  &:active,
+  &:focus{
+    color: $white;
+    text-decoration: none;
+    background: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.btn--icon {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    fill: currentColor;
+  }
+} 

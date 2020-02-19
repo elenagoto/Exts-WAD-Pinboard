@@ -1,0 +1,65 @@
+/* ======================
+* DISCUSSION ELEMENTS
+========================= */
+.comments {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: ($pulse * 2.5);
+  width: 100%;
+
+  @include desktop {
+      width: 70rem;
+    }
+}
+.comments__avatar {
+  padding-right: 2rem;
+}
+.comments__text {
+  width: 100%;
+
+  .input {
+    flex-direction: column;
+    > * {
+      margin-bottom: $pulse;
+  }
+  .btn {
+    width: 30%;
+  }
+
+    &_field {
+      @include tablet {
+      width: 100%;
+      }
+    }
+  }
+}
+
+.comments__title {
+  span {
+    color: $gray-3;
+  } 
+} 
+
+.comments--add {
+  .comments__avatar {
+    padding-top: 4rem;
+  } 
+}
+
+.comments__user {
+  margin: 0 0 $pulse 0;
+
+  .user__name {
+    a {
+      color: $black;
+    }
+    a:hover, a:focus {
+      color: $primary-color;
+    }
+  }
+  
+  .comments__time {
+    color: $gray-3;
+  }
+
+}

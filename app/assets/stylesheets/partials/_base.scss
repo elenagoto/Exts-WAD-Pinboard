@@ -1,0 +1,26 @@
+/* =============================
+ * BASE
+ =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Muli',
+  helvetica,
+  arial,
+  sans-serif;
+  font-size: 62.5%; /* 10px /16px*/
+  background-color: #fafafa;
+  line-height: $base-line-height;
+}
+
+body {
+  color: $gray-1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

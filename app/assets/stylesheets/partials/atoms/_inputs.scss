@@ -1,0 +1,91 @@
+/* ===============
+* INPUTS
+==================  */
+
+.input {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: $black;
+  width: 100%;
+
+  &__label {
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0 $pulse 1rem 0;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__field {
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: 0.5em;
+    box-shadow: 0 0.3rem 2rem $gray-4;
+    color: $gray-1;
+    display: block;
+    padding: 1em;
+    font-size: inherit;
+    width: 100%;
+
+    &--warning {
+      border: 1px solid $secondary-color;
+    }
+  }
+}  
+
+.input--textarea textarea {
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+  height: 10rem;
+} 
+
+.input--file {
+  // width: 100%;
+
+  input[type=file] {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;  
+    }
+    .btn {
+      padding: 1.6em;
+      display: block;
+      text-align: center;
+      // width: 100%;
+    }
+}
+
+.input--horizontal {
+  @include tablet {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+  }
+  .checkbox-main {
+    display: flex;
+    align-items: center;
+
+    input {
+      width: auto;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 0;
+    }
+    label {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+
+

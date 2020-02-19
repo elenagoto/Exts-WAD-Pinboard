@@ -1,0 +1,42 @@
+/* ==============================
+ * HEADER
+================================= */
+.banner {
+  color: $black;
+  margin: 0;
+  padding: 0;
+
+}
+
+.global-header {
+  margin: 0 0 ($pulse * 3) 0;
+  padding: 1rem 0;
+
+   .logo {
+    float: left;
+    margin: 1rem $pulse 1rem 0;
+  }
+
+   .search {
+    float: left;
+    flex: 1 0 auto;
+    margin: 0 0 -1px 0;
+
+    @media screen and (min-width: 700px)  {
+        margin-right: $pulse;
+    }
+  }
+   .content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+}

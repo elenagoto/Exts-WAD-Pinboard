@@ -1,0 +1,100 @@
+
+/* ==============================
+ * FORMS
+================================= */
+
+.form__container {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+  border-radius: 2rem;
+  display: flex;
+  margin-bottom: 3rem;
+  width: 100%;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: ($pulse * 2);
+  width: 100%;
+
+  &__text {
+    color: $gray-3; 
+  }
+
+  &--create {
+    .input__field {
+      @include tablet {
+        width: 90%;
+      }
+    }
+  }
+  &--login {
+    @include tablet {
+      width: 80%;
+    }
+    @include desktop {
+      width: 70%;
+    }
+  }
+  
+}
+
+.input__description {
+  margin: -3rem 0 $pulse 0;
+}
+
+.prompt {
+  width: 100%;
+
+  .btn {
+    border-radius: 0.5em;
+    width: 100%;
+  }
+
+}
+
+.input--horizontal {
+  .prompt {
+    @include tablet {
+      width: 90%;
+    }
+  }
+}
+
+.input--checkbox{
+  display: flex;
+  justify-content: space-between;
+
+  .input__label {
+    margin: 0;
+  }
+}
+
+.input__btn {
+  @include tablet{
+    align-items: center;
+  }
+}
+
+.form--warning {
+  > div:nth-child(2) {
+    margin-top: 0;
+  }
+  .alert {
+    display: block;
+  }
+}
+
+.input__btn--alone {
+  .btn {
+    width: 100%;
+    
+  }
+}
+
+.alert {
+  color: $alert-color;
+  padding: $pulse 0;
+}

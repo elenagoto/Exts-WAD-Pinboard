@@ -1,0 +1,83 @@
+/* ==============================
+* TYPOGRAPHY
+ ================================ */
+
+a, p, ul, ol, span, label {
+  font-size: $pulse;
+  line-height: $base-line-height;
+}
+
+h1, h2, h3, h4, h5, h6
+.alpha, .beta, .gamma, .delta, .gamma, .epsilon, .zeta {
+  font-weight: normal;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+h1, .alpha {
+  font-size: 3.6rem; /* 36px/10px */
+  line-height: 1.2;
+  color: $black;
+
+  @include tablet {
+    font-size: 4rem; /* 40px/10px */
+  }
+
+  @include desktop {
+    font-size: ($pulse * 3); /* 48px/10px */
+  }
+}
+
+h2, .beta {
+  font-size: 2.8rem; /* 36px/10px */
+  line-height: 1.2;
+  color: $black;
+
+  @include tablet {
+    font-size: 3.2rem; /* 36px/10px */
+  }
+
+  @include desktop {
+    font-size: 3.6rem; /* 36px/10px */
+  }
+}
+
+h3, .gamma {
+  font-size: 2.4rem; /* 28px/10px */
+  line-height: 1.2;
+  color: $black;
+
+  @include tablet {
+    font-size: 2.8rem; /* 28px/10px */
+  }
+}
+
+
+h4, .delta {
+  font-size: 1.3rem; /* 13px/10px */
+  line-height: 1.5;
+  color: $gray-1;
+  text-transform: uppercase;
+}
+
+h5, .epsilon {
+  font-size: 1.4rem; /* 14px/10px */
+  line-height: 1.4;
+  color: $gray-1;
+}
+
+h6, .zeta {
+  font-size: 1.2rem; /* 12px/10px */
+  font-weight: normal;
+  line-height: 1.4;
+  color: $gray-1;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover, &:focus {
+    color: $secondary-color;
+  }
+}

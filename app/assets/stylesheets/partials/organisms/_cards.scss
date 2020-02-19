@@ -1,0 +1,29 @@
+/* ==============================
+* CARDS
+================================= */
+
+.cards {
+  margin: 3rem -2rem 3rem 0;;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &::after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+  .card {
+    @include tablet {
+      float: left;
+      width: calc(50% - (#{$pulse} * 1.5));
+    }
+    @include desktop {
+      width: calc(33.33% - (#{$pulse} * 1.5));
+    }
+  }
+}

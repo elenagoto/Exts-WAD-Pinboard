@@ -386,39 +386,73 @@ a {
       color: #ecb807; }
 
 /* ==============================
-* DROPDOWN MENU
+* CARD
 ================================= */
-.dropdown-menu {
-  display: none;
-  background: #fafafa;
-  border-radius: 3px;
-  color: #1f97bb;
-  padding: 0;
-  position: absolute;
-  right: 0.5rem;
-  white-space: nowrap; }
-  .dropdown-menu > li {
-    padding: 0;
-    border-bottom: 1px solid #e3e5e9; }
-  .dropdown-menu a {
-    color: #1f97bb;
-    display: block;
-    padding: 0.5rem 7rem 0.5rem 1em; }
-  .dropdown-menu a:hover,
-  .dropdown-menu a:focus {
-    display: block;
-    text-decoration: underline;
-    background: #e3e5e9; }
-
-.has-dropdown {
+.card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+  margin: 0 2.4rem 1.6rem 0;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: start;
   position: relative; }
-  .has-dropdown a {
+  .card img {
+    border-radius: 2rem;
+    width: 100%;
+    display: block;
+    margin: 0 0 0 0; }
+  .card__thumb {
+    color: #e3e5e9;
+    cursor: zoom-in;
+    font-size: 1.3rem;
     display: block; }
+  .card__intro {
+    padding: 1.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+  .card__title {
+    background-color: rgba(255, 252, 249, 0.5);
+    border-radius: 2rem;
+    color: #212529;
+    font-size: 2.2rem;
+    padding: 1rem; }
+  @media screen and (min-width: 800px) {
+    .card__title {
+      background-color: transparent; }
+    .card__intro {
+      background-color: rgba(255, 252, 249, 0.5); }
+    .card--show {
+      opacity: 0;
+      transition: all .1s ease; }
+    .card:hover .card--show,
+    .card:focus .card--show {
+      opacity: 1; } }
 
-.has-dropdown a:hover + .dropdown-menu,
-.has-dropdown a:focus + .dropdown-menu,
-.dropdown-menu:hover, .dropdown-menu:focus {
-  display: block; }
+.card__footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em; }
+  .card__footer .btn {
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #212529;
+    display: flex;
+    align-self: end;
+    padding: 0.8em; }
+    .card__footer .btn::before {
+      content: "";
+      padding-top: 100%; }
+  @media screen and (min-width: 800px) {
+    .card__footer .btn {
+      box-shadow: none;
+      padding: 1em; } }
 
 /* ==================
 * GOAL ELEMENTS
@@ -525,41 +559,6 @@ a {
     color: #bbc1c6; }
 
 /* ==============================
-* FOLLOWERS SECTION
-================================= */
-.follower {
-  border-bottom: 1px solid #e3e5e9;
-  color: #bbc1c6;
-  padding: 1.6rem 0; }
-  .follower::after {
-    display: table;
-    content: " ";
-    clear: both; }
-  .follower__profile {
-    float: left; }
-    .follower__profile::after {
-      display: table;
-      content: " ";
-      clear: both; }
-  .follower__avatar {
-    float: left;
-    padding-right: 1.6rem; }
-  .follower__info {
-    float: right; }
-    .follower__info > * {
-      display: block; }
-  .follower__btn {
-    float: right; }
-    .follower__btn .btn {
-      display: block;
-      padding: 1.6rem 1.2rem;
-      text-align: center;
-      width: 13rem; }
-      @media screen and (min-width: 600px) {
-        .follower__btn .btn {
-          width: 17rem; } }
-
-/* ==============================
 * CARDS
 ================================= */
 .cards {
@@ -581,72 +580,6 @@ a {
   @media screen and (min-width: 800px) {
     .cards .card {
       width: calc(33.33% - (1.6rem * 1.5)); } }
-
-.card {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
-  margin: 0 2.4rem 1.6rem 0;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-self: start;
-  position: relative; }
-  .card img {
-    border-radius: 2rem;
-    width: 100%;
-    display: block;
-    margin: 0 0 0 0; }
-  .card__thumb {
-    color: #e3e5e9;
-    cursor: zoom-in;
-    font-size: 1.3rem;
-    display: block; }
-  .card__intro {
-    padding: 1.2em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0; }
-  .card__title {
-    background-color: rgba(255, 252, 249, 0.5);
-    border-radius: 2rem;
-    color: #212529;
-    font-size: 2.2rem;
-    padding: 1rem; }
-  @media screen and (min-width: 800px) {
-    .card__title {
-      background-color: transparent; }
-    .card__intro {
-      background-color: rgba(255, 252, 249, 0.5); }
-    .card--show {
-      opacity: 0;
-      transition: all .1s ease; }
-    .card:hover .card--show,
-    .card:focus .card--show {
-      opacity: 1; } }
-
-.card__footer {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 1.5em;
-  right: 1.5em; }
-  .card__footer .btn {
-    align-items: center;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 7px #212529;
-    display: flex;
-    align-self: end;
-    padding: 0.8em; }
-    .card__footer .btn::before {
-      content: "";
-      padding-top: 100%; }
-  @media screen and (min-width: 800px) {
-    .card__footer .btn {
-      box-shadow: none;
-      padding: 1em; } }
 
 /* ==============================
  * HEADER
@@ -811,12 +744,6 @@ main {
 .discussion {
   width: 100%;
   margin-top: 3.2rem; }
-
-/* ==============================
- * FOLLOWERS
-================================= */
-.followers > div:last-child {
-  border: none; }
 
 /* ==============================
  * FORMS

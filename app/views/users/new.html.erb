@@ -1,13 +1,5 @@
   <!-- START Main -->
   <main class="main">
-    <!-- Masthead -->
-    <div class="masthead">
-      <div class="content-wrapper">
-        <div class="masthead__text">
-        </div>
-      </div>
-    </div>
-    <!-- END Masthead -->
     <div class="main__header">
       <div class="content-wrapper">
         <h1 class="beta">Register or Login</h1>
@@ -16,24 +8,26 @@
     <div class="main__content">
       <div class="content-wrapper">
         <!-- START From Sign in -->
-        <div class="alert alert--wide">
-          <p>Incorrect email/password combination.</p>
-        </div>
+        <% if @user.errors.any? %>
+          <div class="alert alert--wide">
+            <p> <%= @user.errors.full_messages.join('<br/>') %> </p>
+          </div>
+        <% end %>
+        
         <div class="form__container form--login">
-            <form class="form" action="log-in.html" method="post">
+          <%= form_for @user, html: {class: 'form'} do |f| %>
               <div class="input">
-                <label for="email" class="input__label">Email</label>
+                <%= f.label :email, "Email", class: 'input__label'%>
                 <div>
-                  <input id="email" class="input__field" type="email" name="email"
-                  placeholder="e.g. diana.prince@wonder.com" required>
+                  <%= f.email_field :email, class: 'input__field', placeholder: 'e.g. me@happy' %>
                 </div>
               </div>
               <div class="form__text input__btn">
                 <div class="prompt">
-                  <button class="btn btn--cta prompt__confirm" type="submit">Log in</button>
+                  <%= f.submit 'Log in', class: 'btn btn--cta prompt__confirm'%>
                 </div>
               </div>
-            </form>
+          <% end %>
           </div>
         </div>
     </div>

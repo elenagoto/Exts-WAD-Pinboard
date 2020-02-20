@@ -9,8 +9,10 @@
       <div class="content-wrapper">
         <!-- START From Sign in -->
         <% if @pin.errors.any? %>
-          <div class="alert alert--wide">
-            <p> <%= @pin.errors.full_messages.join('<br/>') %> </p>
+          <div class="alert">
+            <% @pin.errors.full_messages.each do |error| %>
+              <p class="alert__message"> <%= error %> </p>
+            <% end %>
           </div>
         <% end %>
         <div class="form__container">

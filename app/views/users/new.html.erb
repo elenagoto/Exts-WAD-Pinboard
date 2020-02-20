@@ -8,7 +8,7 @@
     <div class="main__content">
       <div class="content-wrapper">
         <!-- START Form Sign in -->
-                <% if @pin.errors.any? %>
+        <% if @pin.errors.any? %>
           <div class="alert">
             <% @pin.errors.full_messages.each do |error| %>
               <p> <%= error %> </p>

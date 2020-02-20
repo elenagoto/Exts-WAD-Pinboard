@@ -9,7 +9,6 @@
   display: flex;
   margin-bottom: 3rem;
   width: 100%;
-
 }
 
 .form {
@@ -18,10 +17,6 @@
   justify-content: center;
   padding: ($pulse * 2);
   width: 100%;
-
-  &__text {
-    color: $gray-3; 
-  }
 
   &--create {
     .input__field {
@@ -81,7 +76,7 @@
   }
 }
 
-.input__btn--alone {
+.input__btn {
   .btn {
     width: 100%;
     

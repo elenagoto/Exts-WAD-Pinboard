@@ -7,11 +7,11 @@
     </div>
     <div class="main__content">
       <div class="content-wrapper">
-        <!-- START From Sign in -->
+        <!-- START For Create -->
         <% if @pin.errors.any? %>
           <div class="alert">
             <% @pin.errors.full_messages.each do |error| %>
-              <p class="alert__message"> <%= error %> </p>
+              <p> <%= error %> </p>
             <% end %>
           </div>
         <% end %>

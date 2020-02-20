@@ -7,10 +7,12 @@
     </div>
     <div class="main__content">
       <div class="content-wrapper">
-        <!-- START From Sign in -->
-        <% if @user.errors.any? %>
-          <div class="alert alert--wide">
-            <p> <%= @user.errors.full_messages.join('<br/>') %> </p>
+        <!-- START Form Sign in -->
+                <% if @pin.errors.any? %>
+          <div class="alert">
+            <% @pin.errors.full_messages.each do |error| %>
+              <p> <%= error %> </p>
+            <% end %>
           </div>
         <% end %>
         

@@ -31,7 +31,11 @@
           </form>
           <nav>
             <ul class="global-nav bare-list">
-              <li><%= link_to  "Login/Register", new_user_path %></li>
+              <% if @user.present? && @user.valid? %>
+                <li><%= link_to  "My List", user_images_path(@user) %></li>
+              <% else %>
+                <li><%= link_to  "Login/Register", new_user_path %></li>
+              <% end %>
               <li><a href="about.html">About</a></li>
             </ul>
           </nav>

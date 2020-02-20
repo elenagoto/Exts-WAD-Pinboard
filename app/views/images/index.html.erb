@@ -1,22 +1,27 @@
 <!-- START Main -->
-    <main class="main">
-      <!-- Masthead -->
-      <div class="masthead">
-        <div class="content-wrapper">
-          <div class="masthead__text">
-            <h1>Add, pin and share your favorite images</h1>
-          </div>
+  <main class="main">
+    <!-- Masthead -->
+    <div class="masthead">
+      <div class="content-wrapper">
+        <div class="masthead__text">
+          <h1>My Pins</h1>
         </div>
       </div>
-      <!-- END Masthead -->
-      <div class="main__header">
-        <div class="content-wrapper">
-          <h2>Latest pins</h2>
-        </div>
+    </div>
+    <!-- END Masthead -->
+    <div class="main__header">
+      <div class="content-wrapper">
+        <button class="btn btn--cta" type="submit" name="action" value="addGoal">
+          <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+            <use xlink:href="images/icons/icons-defs.svg#edit"></use>
+          </svg>
+          Create New
+        </button>
       </div>
-      <div class="main__content">
-        <div class="content-wrapper">
-          <ul class="bare-list cards">
+    </div>
+    <div class="main__content">
+      <div class="content-wrapper">
+        <ul class="bare-list cards">
             <% ['https://s3fs.paintnite.com/yaymaker-images/nite-out/566x566/70/10004350-kois-will-be-kois.jpg',
                 'https://i.pinimg.com/564x/d6/4c/85/d64c85163121ab479279202038a78c22.jpg',
                 'http://3.bp.blogspot.com/-49QZFZh2vDc/Tz02c7-bLEI/AAAAAAAAB2k/OJwj3M-zJKc/s1600/Minervois+Vineyards+12x18+2003.jpg',
@@ -29,7 +34,7 @@
               </li>
             <% end %>
           </ul>
-        </div>
       </div>
-    </main>
-<!-- END Main -->
+    </div>
+  </main>
+  <!-- END Main -->

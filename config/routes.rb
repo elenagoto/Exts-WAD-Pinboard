@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   get 'home/index'
 
   # Resources
-  resources :users
+  resources :users do
+    resources :images
+  end
+
+  resources :pins
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -15,7 +15,7 @@ class PinsTest < ApplicationSystemTestCase
   end
 
   test 'pins are loaded in the index' do
-    5.times do |i|
+    3.times do |i|
       pin = Pin.new title: "Default title for pin # #{i + 1}",
                     image_url: 'https://static.boredpanda.com/blog/wp-content/uploads/2015/05/animal-origami-paper-art-hoang-tien-quyet-1-1.jpg',
                     user: User.new
@@ -27,6 +27,23 @@ class PinsTest < ApplicationSystemTestCase
     assert page.has_content?('Default title for pin # 1')
     assert page.has_content?('Default title for pin # 2')
     assert page.has_content?('Default title for pin # 3')
+    Capybara.ignore_hidden_elements = true
+  end
+
+  test 'only most recent ideas are loaded in the index' do
+    8.times do |i|
+      pin = Pin.new title: "Default title for pin # #{i + 1}",
+                    image_url: 'https://static.boredpanda.com/blog/wp-content/uploads/2015/05/animal-origami-paper-art-hoang-tien-quyet-1-1.jpg',
+                    user: User.new
+      pin.save!
+    end
+
+    visit root_path
+    Capybara.ignore_hidden_elements = false
+    assert page.has_content?('Default title for pin # 4')
+    assert page.has_content?('Default title for pin # 6')
+    assert page.has_content?('Default title for pin # 8')
+    refute page.has_content?('Default title for pin # 1')
     Capybara.ignore_hidden_elements = true
   end
 end

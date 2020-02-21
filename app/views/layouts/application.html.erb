@@ -17,18 +17,18 @@
             <span>P<%= image_tag('pinboard_logo.svg', alt: ' Pinboard Logo') %>nboard </span>
             </a>
           </div>
-          <form class="search search--cta" action="ideas" method="get">
+          <%= form_tag(pins_path, class: 'search search--cta', method: 'GET') do %>
             <label for="global-search" class="search__label sr-only">Search</label>
             <div class="search__row">
-              <input id="global-search" class="search__field" type="text" name="search" placeholder="e.g. Swimming with dolphins"/>
-              <button class="btn btn--cta" type="submit">
+              <%= text_field_tag 'q', nil, class: 'search__field', placeholder: 'e.g. Origami'%>
+              <%= button_tag class: 'btn btn--cta', name: nil do %>
                 <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
                   <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#search") %>"></use>
                 </svg>
                 Search
-              </button>
+              <% end %>
             </div>
-          </form>
+          <% end %>
           <nav>
             <ul class="global-nav bare-list">
               <% if @user.present? && @user.valid? %>

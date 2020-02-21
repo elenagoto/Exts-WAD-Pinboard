@@ -13,7 +13,7 @@ class PinsController < ApplicationController
     @pin.user = user
 
     if @pin.save
-      redirect_to user_images_path(user)
+      redirect_to root_path
     else
       render 'new'
     end

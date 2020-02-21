@@ -1,16 +1,16 @@
-<%= image_tag pin.image_url, alt: "image of art" %>
+<%= image_tag image_url, alt: "image of art" %>
 <a class="card__thumb" href="ideas/see-northen-lights.html">
   <div class="card__intro card--show">
-    <h3 class="card__title"> <%= pin.title %> </h3>
+    <h3 class="card__title"> <%= title %> </h3>
   </div>
 </a>
 <div class="card__form">
   <form class="card__footer card--show" action="idea" method="post">
     <button class="btn btn--cta"type="submit" name="action" value="addGoal">
       <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-        <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#pin") %>"></use>
+        <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#edit") %>"></use>
       </svg>
-      Pin it
+      Edit
     </button>
   </form>
 </div>

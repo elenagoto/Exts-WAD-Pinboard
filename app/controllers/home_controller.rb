@@ -5,5 +5,7 @@ class HomeController < ApplicationController
     else
       @user = nil
     end
+
+    @pins = Pin.most_recent
   end
 end

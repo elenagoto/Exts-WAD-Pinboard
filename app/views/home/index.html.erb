@@ -17,15 +17,9 @@
       <div class="main__content">
         <div class="content-wrapper">
           <ul class="bare-list cards">
-            <% ['https://s3fs.paintnite.com/yaymaker-images/nite-out/566x566/70/10004350-kois-will-be-kois.jpg',
-                'https://i.pinimg.com/564x/d6/4c/85/d64c85163121ab479279202038a78c22.jpg',
-                'http://3.bp.blogspot.com/-49QZFZh2vDc/Tz02c7-bLEI/AAAAAAAAB2k/OJwj3M-zJKc/s1600/Minervois+Vineyards+12x18+2003.jpg',
-                'https://upload.wikimedia.org/wikipedia/commons/1/10/Van_Gogh_-_Country_road_in_Provence_by_night.jpg',
-                'https://cdn.colombia.com/sdi/2014/08/15/d66edbad59cf49cfb61029fb676fe533.jpg',
-                'http://4.bp.blogspot.com/-YfOFOFvXKFg/Vp-R8C7IrvI/AAAAAAABZ-0/Jp6-jSxppGo/s1600/1994the30daysfaxpainting-vi.jpg'].each do |image_url| %>
+            <% @pins.each do |pin| %>
               <li class="card">
-                <%= render partial: 'pin_card', locals: { title: 'See the northen lights.',
-                                                      image_url: image_url} %>
+                <%= render partial: 'pin_card', locals: { pin: pin } %>
               </li>
             <% end %>
           </ul>

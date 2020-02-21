@@ -70,4 +70,28 @@ class PinsTest < ApplicationSystemTestCase
 
     assert page.has_content? 'Tag is too long (maximum is 30 characters)'
   end
+
+  test 'search form' do
+    pin = Pin.new user: User.new,
+                  title: 'Sunflowers from van Gogh',
+                  tag: 'Impressionism, Oil painting'
+    pin.save!
+
+    pin_two = Pin.new user: User.new,
+                      title: 'Origami Fox',
+                      tag: 'Tomoko Fuse, Animal'
+    pin_two.save!
+
+    visit root_path
+    fill_in 'q', with: 'Fox'
+    click_on 'Search', match: :first
+
+    assert_equal current_path, pins_path
+
+    find('.card').hover
+    assert page.has_content? 'Origami Fox'
+
+    find('.card').hover
+    refute page.has_content? 'Sunflowers from van Gogh'
+  end
 end

@@ -28,11 +28,11 @@ class PinTest < ActiveSupport::TestCase
 
   test 'most recent method 2 records' do
     pin_one = Pin.new user: User.new,
-                    title: "Beautiful pin 1"
+                      title: 'Beautiful pin 1'
     pin_one.save!
 
     pin_two = Pin.new user: User.new,
-                    title: "Beautiful pin 2"
+                      title: 'Beautiful pin 2'
     pin_two.save!
 
     assert_equal Pin.most_recent.length, 2
@@ -42,11 +42,51 @@ class PinTest < ActiveSupport::TestCase
   test 'most recent method 8 records' do
     8.times do |i|
       pin = Pin.new user: User.new,
-                      title: "Beautiful pin #{i + 1}"
+                    title: "Beautiful pin #{i + 1}"
       pin.save!
     end
 
-    assert_equal Idea.most_recent.length, 6
-    assert_equal Idea.most_recent.first.title, 'Beautiful pin 8'
+    assert_equal Pin.most_recent.length, 6
+    assert_equal Pin.most_recent.first.title, 'Beautiful pin 8'
+  end
+
+  test 'search one matching result' do
+    pin = Pin.new user: User.new,
+                  title: 'Sunflowers from van Gogh'
+    pin.save!
+    result = Pin.search('sunflower')
+    assert_equal result.length, 1
+  end
+
+  test 'search no matching results' do
+    pin = Pin.new user: User.new,
+                  title: 'Sunflowers from van Gogh'
+    pin.save!
+    assert_empty Pin.search('Origami')
+  end
+
+  test 'search matching tag also' do
+    pin = Pin.new user: User.new,
+                  title: 'Sunflowers from van Gogh',
+                  tag: 'Impressionism, Oil painting'
+    pin.save!
+
+    result = Pin.search('impressionism')
+    assert_equal result.length, 1
+  end
+
+  test 'search two matching results' do
+    pin = Pin.new user: User.new,
+                  title: 'Sunflowers from van Gogh',
+                  tag: 'Impressionism, Oil painting'
+    pin.save!
+
+    pin_two = Pin.new user: User.new,
+                      title: 'The Starry Night',
+                      tag: 'Impressionism, van Gogh'
+    pin_two.save!
+
+    result = Pin.search('van Gogh')
+    assert_equal result.length, 2
   end
 end

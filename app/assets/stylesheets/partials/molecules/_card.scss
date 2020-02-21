@@ -43,6 +43,9 @@
     font-size: 2.2rem;
     padding: 1rem;
   }
+  &__tag {
+    padding: 0 1rem;
+  }
 
   @include desktop {
     &__title {

@@ -1,0 +1,5 @@
+<% if(image_url.nil? || image_url.empty?) %>
+  <%= image_tag("http://fpoimg.com/255x170", alt: 'Stock image')  %>
+<% else %>
+  <%= image_tag(image_url, alt: alt)  %>
+<% end %>

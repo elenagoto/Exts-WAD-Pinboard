@@ -29,6 +29,11 @@ flex: 1 0 auto;
 
   .content-wrapper {
     display: flex;
+    justify-content: space-between;
+
+    .btn {
+      align-self: center;
+    }
   }
 }
 

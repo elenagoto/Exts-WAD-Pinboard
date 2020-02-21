@@ -46,4 +46,28 @@ class PinsTest < ApplicationSystemTestCase
     refute page.has_content?('Default title for pin # 1')
     Capybara.ignore_hidden_elements = true
   end
+
+  test 'validation for pin without a title' do
+    visit new_user_path
+    fill_in 'Email', with: 'happy@home.ch'
+    click_on 'Log in', match: :first
+
+    visit new_pin_path
+    click_on 'Create', match: :first
+
+    assert page.has_content? "Title can't be blank"
+  end
+
+  test 'validation for pin with tag too long' do
+    visit new_user_path
+    fill_in 'Email', with: 'happy@home.ch'
+    click_on 'Log in', match: :first
+
+    visit new_pin_path
+    fill_in 'Title', with: 'Default pin title'
+    fill_in 'Tag', with: 'This is a very long tag that I want to use'
+    click_on 'Create', match: :first
+
+    assert page.has_content? 'Tag is too long (maximum is 30 characters)'
+  end
 end

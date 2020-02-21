@@ -30,7 +30,7 @@ class PinsTest < ApplicationSystemTestCase
     Capybara.ignore_hidden_elements = true
   end
 
-  test 'only most recent ideas are loaded in the index' do
+  test 'only most recent pins are loaded in the index' do
     8.times do |i|
       pin = Pin.new title: "Default title for pin # #{i + 1}",
                     image_url: 'https://static.boredpanda.com/blog/wp-content/uploads/2015/05/animal-origami-paper-art-hoang-tien-quyet-1-1.jpg',

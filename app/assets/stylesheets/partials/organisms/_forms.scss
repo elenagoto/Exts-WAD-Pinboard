@@ -85,5 +85,12 @@
 
 .alert {
   color: $alert-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: $pulse 0;
+
+  p {
+    margin: 0.3rem;
+  } 
 }

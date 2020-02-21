@@ -1,0 +1,27 @@
+         Prefix Verb   URI Pattern                               Controller#Action
+           root GET    /                                         home#index
+     home_index GET    /home/index(.:format)                     home#index
+    user_images GET    /users/:user_id/images(.:format)          images#index
+                POST   /users/:user_id/images(.:format)          images#create
+ new_user_image GET    /users/:user_id/images/new(.:format)      images#new
+edit_user_image GET    /users/:user_id/images/:id/edit(.:format) images#edit
+     user_image GET    /users/:user_id/images/:id(.:format)      images#show
+                PATCH  /users/:user_id/images/:id(.:format)      images#update
+                PUT    /users/:user_id/images/:id(.:format)      images#update
+                DELETE /users/:user_id/images/:id(.:format)      images#destroy
+          users GET    /users(.:format)                          users#index
+                POST   /users(.:format)                          users#create
+       new_user GET    /users/new(.:format)                      users#new
+      edit_user GET    /users/:id/edit(.:format)                 users#edit
+           user GET    /users/:id(.:format)                      users#show
+                PATCH  /users/:id(.:format)                      users#update
+                PUT    /users/:id(.:format)                      users#update
+                DELETE /users/:id(.:format)                      users#destroy
+           pins GET    /pins(.:format)                           pins#index
+                POST   /pins(.:format)                           pins#create
+        new_pin GET    /pins/new(.:format)                       pins#new
+       edit_pin GET    /pins/:id/edit(.:format)                  pins#edit
+            pin GET    /pins/:id(.:format)                       pins#show
+                PATCH  /pins/:id(.:format)                       pins#update
+                PUT    /pins/:id(.:format)                       pins#update
+                DELETE /pins/:id(.:format)                       pins#destroy

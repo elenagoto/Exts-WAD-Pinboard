@@ -1,5 +1,14 @@
 class PinsController < ApplicationController
   def index
+    if session[:user_id].present?
+      @user = User.find(session[:user_id])
+    else
+      @user = nil
+    end
+
+    @search_term = params[:q]
+    logger.info("Search completed using #{@search_term}")
+    @pins = Pin.search(@search_term)
   end
 
   def new

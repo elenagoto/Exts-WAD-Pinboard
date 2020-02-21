@@ -1,0 +1,25 @@
+<!-- START Main -->
+    <main class="main">
+      <!-- Masthead -->
+      <!-- END Masthead -->
+        <% if @ideas.any? %>
+        <% else %>
+        <% end %>
+    <div class="main__header">
+      <div class="content-wrapper">
+        <h2>Results for </h2>
+      </div>
+    </div>
+    <div class="main__content">
+      <div class="content-wrapper">
+        <ul class="bare-list cards">
+          <% @pins.each do |pin| %>
+            <li class="card">
+              <%= render partial: 'pin_card', locals: { pin: pin } %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+</div>
+    </main>
+<!-- END Main -->

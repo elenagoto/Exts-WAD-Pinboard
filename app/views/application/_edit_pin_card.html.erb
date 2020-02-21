@@ -1,9 +1,9 @@
-<%= render partial: 'pin_image', locals: { image_url: image_url,
+<%= render partial: 'pin_image', locals: { image_url: pin.image_url,
                                           alt: "image art"} %>
 <a class="card__thumb" href="ideas/see-northen-lights.html">
   <div class="card__intro card--show">
-    <h3 class="card__title"> <%= title %> </h3>
-    <h5 class="card__tag"><%= tag %></h5>
+    <h3 class="card__title"> <%= pin.title %> </h3>
+    <h5 class="card__tag"><%= pin.tag %></h5>
   </div>
 </a>
 <div class="card__form">

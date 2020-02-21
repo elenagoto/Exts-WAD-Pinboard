@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   def index
     @user = User.find(session[:user_id])
+    @pins = @user.images.all
   end
 
   def create

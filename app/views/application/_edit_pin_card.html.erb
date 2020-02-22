@@ -7,12 +7,12 @@
   </div>
 </a>
 <div class="card__form">
-  <form class="card__footer card--show" action="idea" method="post">
-    <button class="btn btn--cta"type="submit" name="action" value="addGoal">
+  <div class="card__footer card--show">
+    <a class="btn btn--cta" href="<%= edit_pin_path(pin) %>"> 
       <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
         <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#edit") %>"></use>
       </svg>
       Edit
-    </button>
-  </form>
+    </a>
+  </div>
 </div>

@@ -8,7 +8,7 @@ class PinsController < ApplicationController
 
     @search_term = params[:q]
     logger.info("Search completed using #{@search_term}")
-    @pins = Pin.search(@search_term)
+    @pins = Pin.search(@search_term).order(created_at: :desc)
   end
 
   def new
@@ -25,6 +25,21 @@ class PinsController < ApplicationController
       redirect_to root_path
     else
       render 'new'
+    end
+  end
+
+  def edit
+    @pin = Pin.find(params[:id])
+  end
+
+  def update
+    @user = User.find(session[:user_id])
+    @pin = Pin.find(params[:id])
+
+    if @pin.update(pin_params)
+      redirect_to user_images_path(@user)
+    else
+      render 'edit'
     end
   end
 

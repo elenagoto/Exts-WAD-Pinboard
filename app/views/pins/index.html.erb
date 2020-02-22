@@ -7,7 +7,11 @@
         <% end %>
     <div class="main__header">
       <div class="content-wrapper">
-        <h2>Results for "<%= @search_term %>"</h2>
+        <% if @search_term  %>
+          <h2>Results for "<%= @search_term %>"</h2>
+        <% else %>
+          <h2>All pins</h2>
+        <% end %>
       </div>
     </div>
     <div class="main__content">

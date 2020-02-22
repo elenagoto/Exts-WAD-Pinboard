@@ -1,0 +1,27 @@
+<% if pin.errors.any? %>
+  <div class="alert">
+    <% pin.errors.full_messages.each do |error| %>
+      <p> <%= error %> </p>
+    <% end %>
+  </div>
+<% end %>
+<div class="form__container">
+<%= form_for pin, html: {class: 'form form--create'} do |f| %>
+  <div class="input input--horizontal">
+    <%= f.label :title, class: 'input__label' %>
+    <%= f.text_field :title, class: 'input__field' %>
+  </div>
+  <div class="input input--horizontal">
+    <%= f.label :tag, class: 'input__label' %>
+    <%= f.text_field :tag, class: 'input__field' %>
+  </div>
+  <div class="input input--horizontal">
+    <%= f.label :image_url, class: 'input__label' %>
+    <%= f.text_field :image_url, class: 'input__field' %>
+  </div>
+  <div class="input input--horizontal input__btn">
+    <div class="prompt">
+      <%= f.submit class: 'btn btn--cta prompt__confirm' %>
+    </div>
+  </div>
+<% end %>

@@ -94,4 +94,28 @@ class PinsTest < ApplicationSystemTestCase
     find('.card').hover
     refute page.has_content? 'Sunflowers from van Gogh'
   end
+
+  test 'Edit pin is working' do
+    user = User.new email: 'happy@home.ch'
+    pin = Pin.new title: 'Unedited pin', user: user
+    pin.save!
+
+    visit new_user_path
+    fill_in 'Email', with: 'happy@home.ch'
+    click_on 'Log in', match: :first
+
+    visit pins_path
+    find('.card').hover
+    assert page.has_content? 'Unedited pin'
+
+    visit edit_pin_path(pin)
+    fill_in 'Title', with: 'This is a better title'
+    fill_in 'Tag', with: 'Test, Edit'
+    click_on 'Update', match: :first
+
+    visit pins_path
+    find('.card').hover
+    assert page.has_content? 'This is a better title'
+    assert page.has_content? 'Test, Edit'
+  end
 end

@@ -1,0 +1,122 @@
+<!-- START Main -->
+  <main class="main">
+    <!-- Masthead -->
+    <div class="masthead">
+      <div class="content-wrapper">
+        <div class="masthead__text">
+        </div>
+      </div>
+    </div>
+    <!-- END Masthead -->
+    <div class="main__header">
+      <div class="content-wrapper">
+        <!-- Start Pin -->
+        <div class="goal">
+          <div class="goal__img">
+            <%= render partial: 'pin_image', locals: { image_url: @pin.image_url,
+                                          alt: "image art"} %>
+          </div>
+          <div class="goal__content">
+            <div class="goal__owner">
+              <%= image_tag('avatar.png', alt: 'Default avatar', class: 'avatar' ) %>
+              <span>Created by <a href="#">John Smith</a></span>
+            </div>
+            <div class="goal__title">
+              <h1 class="beta"> <%= @pin.title %> </h1>
+            </div>
+            <div class="goal__btn">
+              <button class="btn btn--icon btn--cta" type="submit" name="action" value="#">
+                <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+                  <use xlink:href="assets/images/icons/icons-defs.svg#pin"></use>
+                </svg>
+                Pin
+              </button>
+              <button class="btn btn--icon btn--cta" type="submit" name="action" value="#">
+                <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+                  <use xlink:href="assets/images/icons/icons-defs.svg#edit"></use>
+                </svg>
+                Edit
+              </button>
+            </div>
+            <div class="goal__description">
+              <p><%= @pin.tag %></p>
+            </div>
+            <div class="goal__stats">
+              <div class="stats__doing">
+                <span><%= @pin.users.length %> loving this</span>
+              </div>
+              <div class="stats__comments"><a href="#">3 comments</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__content">
+      <div class="content-wrapper">
+        <!-- START Discussion -->
+        <div class="discussion">
+          <div class="comments comments__title">
+            <h2>Discussion</h2>
+            <span class="comments__number">3 comments</span>
+          </div>
+          <div class="comments comments--add">
+            <div class="comments__avatar">
+              <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <form class="input input--textarea" action="add-comment" method="POST">
+                <label class="input__label" for="add-comment">Add a comment</label>
+                <textarea class="input__field" id="add-comment" name="add-comment"></textarea>
+                <button class="btn btn--cta" type="submit" name="action" value="#">
+                  Post
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="comments comments--display">
+            <div class="comments__avatar">
+              <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <div class="comments__user">
+                <span class="user__name"><a href="#">William Barnes</a> <span class="comments__time">25 minutes
+                    ago</span>
+                </span>
+              </div>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quis saepe et dignissimos beatae.
+              </p>
+            </div>
+          </div>
+          <div class="comments comments--display">
+            <div class="comments__avatar">
+              <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <div class="comments__user">
+                <span class="user__name"><a href="#">Todd Carey</a> <span class="comments__time">3 days ago</span>
+                </span>
+              </div>
+              <p>Eveniet perspiciatis quas, cupiditate earum, veritatis consequuntur tempora, facilis nemo molestias
+                ex nostrum animi!</p>
+            </div>
+          </div>
+          <div class="comments comments--display">
+            <div class="comments__avatar">
+              <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+            </div>
+            <div class="comments__text">
+              <div class="comments__user">
+                <span class="user__name"><a href="#">Jennifer Douglas</a> <span class="comments__time">1 week
+                    ago</span>
+                </span>
+              </div>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, a harum? </p>
+            </div>
+          </div>
+        </div>
+        <!-- END Discussion -->
+      </div>
+    </div>
+  </main>
+  <!-- END Main -->

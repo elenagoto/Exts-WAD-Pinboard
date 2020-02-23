@@ -44,6 +44,16 @@ class PinsController < ApplicationController
     end
   end
 
+  def show
+    if session[:user_id].present?
+      @user = User.find(session[:user_id])
+    else
+      @user = nil
+    end
+
+    @pin = Pin.find(params[:id])
+  end
+
   private
 
   def pin_params

@@ -1,11 +1,11 @@
 <%= render partial: 'pin_image', locals: { image_url: pin.image_url,
                                           alt: "image art"} %>
-<a class="card__thumb" href="ideas/see-northen-lights.html">
+<%= link_to pin_path(pin), class: 'card__thumb' do %>
   <div class="card__intro card--show">
     <h3 class="card__title"> <%= pin.title %> </h3>
     <h5 class="card__tag"><%= pin.tag %></h5>
   </div>
-</a>
+<% end %>
 <div class="card__form">
   <div class="card__footer card--show">
     <a class="btn btn--cta" href="<%= edit_pin_path(pin) %>"> 

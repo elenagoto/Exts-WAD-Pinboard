@@ -4,7 +4,8 @@
 
 /* OWNER */
 .goal__owner {
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   &::after {
     display: table;
     content: " ";

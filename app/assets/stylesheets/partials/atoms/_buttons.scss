@@ -3,20 +3,20 @@
 ================================= */
 
 .btn {
-  font-size: 1.3rem;
-  line-height: 1;
-  background: $white;
-  color: $black;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: $pulse;
-  margin: 0;
-
+  background: $white;
   border: 1px solid $gray-4;
   border-radius: 2em;
+  color: $black;
+  display: flex;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin: 0;
+  justify-content: center;
+  padding: $pulse;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all .1s ease;
 
   cursor: pointer;
 

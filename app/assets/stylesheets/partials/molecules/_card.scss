@@ -78,12 +78,13 @@
     // Card buttons
     .btn {
       align-items: center;
+      align-self: end;
       border: none;
       border-radius: 50%;
       box-shadow: 0 0 7px $black;
       display: flex;
-      align-self: end;
       padding: 0.8em;
+      width: 8.6rem;
   
       &::before {
         content: "";
@@ -93,7 +94,6 @@
     @include desktop {
       .btn {
         box-shadow: none;
-        padding: 1em;
       }
     }
   }

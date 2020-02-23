@@ -13,7 +13,12 @@
   }
 
   &--liked {
-    fill: $alert-color;
+    fill: $secondary-color;
+    .btn:hover &,
+    .btn:active &,
+    .btn:focus & {
+      fill: $primary-color;
+    }
   }
   &--cta {
     fill: currentColor;

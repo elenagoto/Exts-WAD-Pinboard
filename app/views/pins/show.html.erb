@@ -68,7 +68,7 @@
               <div class="stats__doing">
                 <span><%= @pin.users.length %> loving this</span>
               </div>
-              <div class="stats__comments"><a href="#">3 comments</a></div>
+              <div class="stats__comments"><a href="#discussion"><%= @pin.comments.count %> comments</a></div>
             </div>
           </div>
         </div>
@@ -77,66 +77,44 @@
     <div class="main__content">
       <div class="content-wrapper">
         <!-- START Discussion -->
-        <div class="discussion">
+        <div id="discussion" class="discussion">
           <div class="comments comments__title">
             <h2>Discussion</h2>
-            <span class="comments__number">3 comments</span>
+            <span class="comments__number"> <%= @pin.comments.count %> comments</span>
           </div>
-          <div class="comments comments--add">
-            <div class="comments__avatar">
-              <%= image_tag('avatar.png', alt: 'Default avatar', class: 'avatar' ) %>
-            </div>
-            <div class="comments__text">
-              <form class="input input--textarea" action="add-comment" method="POST">
-                <label class="input__label" for="add-comment">Add a comment</label>
-                <textarea class="input__field" id="add-comment" name="add-comment"></textarea>
-                <button class="btn btn--cta" type="submit" name="action" value="#">
-                  Post
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <div class="comments comments--display">
-            <div class="comments__avatar">
-              <%= image_tag('avatar.png', alt: 'Default avatar', class: 'avatar' ) %>
-            </div>
-            <div class="comments__text">
-              <div class="comments__user">
-                <span class="user__name"><a href="#">William Barnes</a> <span class="comments__time">25 minutes
-                    ago</span>
-                </span>
+          <!-- START Comments add -->
+          <% if @user.present? %>
+            <div class="comments comments--add">
+              <div class="comments__avatar">
+                <%= image_tag('avatar.png', alt: 'Default avatar', class: 'avatar' ) %>
               </div>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quis saepe et dignissimos beatae.
-              </p>
-            </div>
-          </div>
-          <div class="comments comments--display">
-            <div class="comments__avatar">
-              <%= image_tag('avatar.png', alt: 'Default avatar', class: 'avatar' ) %>
-            </div>
-            <div class="comments__text">
-              <div class="comments__user">
-                <span class="user__name"><a href="#">Todd Carey</a> <span class="comments__time">3 days ago</span>
-                </span>
+              <div class="comments__text">
+                <%= form_for([@pin, @comment], html: { class: 'input input--textarea'}) do |f| %>
+                  <%= f.label :body, 'Add a comment', class: 'input__label' %>
+                  <%= f.text_area :body, class: 'input__field' %>
+                  <%= f.submit 'Post', class: 'btn btn--cta' %>
+                <% end %>
+                
               </div>
-              <p>Eveniet perspiciatis quas, cupiditate earum, veritatis consequuntur tempora, facilis nemo molestias
-                ex nostrum animi!</p>
             </div>
-          </div>
-          <div class="comments comments--display">
-            <div class="comments__avatar">
-              <%= image_tag('avatar.png', alt: 'Default avatar', class: 'avatar' ) %>
-            </div>
-            <div class="comments__text">
-              <div class="comments__user">
-                <span class="user__name"><a href="#">Jennifer Douglas</a> <span class="comments__time">1 week
-                    ago</span>
-                </span>
-              </div>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, a harum? </p>
-            </div>
-          </div>
+          <% end %>
+          <!-- START Comments display -->
+          <ul class="comments__listing bare-list">
+            <% @pin.comments.order(created_at: :desc).each do |comment| %>
+              <li class="comments comments--display">
+                <div class="comments__avatar">
+                  <%= image_tag('avatar.png', alt: 'Default avatar', class: 'avatar' ) %>
+                </div>
+                <div class="comments__text">
+                  <div class="comments__user">
+                    <span class="user__name"><a href="#">William Barnes</a> <span class="comments__time"><time datetime="<%= comment.created_at %>"> <%= comment.created_at.strftime("%d %b '%y") %></time></span>
+                    </span>
+                  </div>
+                  <p> <%= comment.body %> </p>
+                </div>
+              </li>
+            <% end %>
+          </ul>
         </div>
         <!-- END Discussion -->
       </div>

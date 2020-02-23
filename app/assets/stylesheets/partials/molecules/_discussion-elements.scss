@@ -4,7 +4,7 @@
 .comments {
   align-items: flex-start;
   display: flex;
-  margin-bottom: ($pulse * 2.5);
+  margin-bottom: ($pulse * 1.5);
   width: 100%;
 
   @include desktop {

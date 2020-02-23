@@ -52,6 +52,7 @@ class PinsController < ApplicationController
     end
 
     @pin = Pin.find(params[:id])
+    @comment = Comment.new
   end
 
   private

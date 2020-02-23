@@ -8,7 +8,7 @@ class PinsController < ApplicationController
 
     @search_term = params[:q]
     logger.info("Search completed using #{@search_term}")
-    @pins = Pin.search(@search_term).order(created_at: :desc)
+    @pins = Pin.search(@search_term)
   end
 
   def new
@@ -29,6 +29,7 @@ class PinsController < ApplicationController
   end
 
   def edit
+    @user = User.find(session[:user_id])
     @pin = Pin.find(params[:id])
   end
 

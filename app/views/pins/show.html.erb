@@ -24,19 +24,38 @@
             <div class="goal__title">
               <h1 class="beta"> <%= @pin.title %> </h1>
             </div>
-            <div class="goal__btn">
-              <button class="btn btn--icon btn--cta" type="submit" name="action" value="#">
+            <div class="goal__buttons">
+              <%= form_tag user_images_path(@pin), class: 'goal__btn' do%>
+                <%= hidden_field_tag(:pin_id, @pin.id) %>
+                <%= button_tag(class: 'btn btn--icon btn--cta', type: 'submit', disabled: @user.images.exists?(@pin.id)) do %>
+                  <% if @user.images.exists?(@pin.id) %>
+                    <svg class="icon icon--liked" height="20" viewBox="0 0 24 24" width="20">
+                      <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#heart") %>"></use>
+                    </svg>
+                    Pinned
+                  <% else %>
+                    <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
+                      <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#pin") %>"></use>
+                    </svg>
+                    Pin it
+                  <% end %>
+                <% end %>
+              <% end %>
+              <!--  <button class="btn btn--icon btn--cta" type="submit" name="action" value="#">
                 <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
                   <use xlink:href="assets/images/icons/icons-defs.svg#pin"></use>
                 </svg>
                 Pin
-              </button>
-              <button class="btn btn--icon btn--cta" type="submit" name="action" value="#">
+              </button>-->
+              
+
+              <%# Button to Edit the card %>
+              <%= link_to edit_pin_path(@pin), class: 'btn btn--icon btn--cta goal__btn' do %>
                 <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
-                  <use xlink:href="assets/images/icons/icons-defs.svg#edit"></use>
+                  <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#edit") %>"></use>
                 </svg>
                 Edit
-              </button>
+              <% end %>
             </div>
             <div class="goal__description">
               <p><%= @pin.tag %></p>

@@ -28,7 +28,7 @@
 }
 
 /* BUTTONS */
-.goal__btn {
+.goal__buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -40,11 +40,17 @@
     clear: both;
   }
 
-  .btn {
+  .goal__btn {
     float: left;
     flex: 1 0 auto;
     margin: 0 $pulse $pulse 0;
     min-width: ($pulse * 7);
+
+    .btn {
+      width: 100%;
+    }
+  }
+  .btn {
     justify-content: center;
   }
 }

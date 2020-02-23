@@ -474,16 +474,16 @@ a {
     color: #1f97bb; }
 
 /* BUTTONS */
-.goal__btn {
+.goal__buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 -1.6rem 0 0; }
-  .goal__btn::after {
+  .goal__buttons::after {
     display: table;
     content: " ";
     clear: both; }
-  .goal__btn .btn {
+  .goal__buttons .btn {
     float: left;
     flex: 1 0 auto;
     margin: 0 1.6rem 1.6rem 0;
@@ -664,7 +664,7 @@ a {
     padding: 1.6rem; }
     .goal__content > * {
       margin-bottom: 1.6rem; }
-  .goal__btn, .goal__tags {
+  .goal__buttons, .goal__tags {
     margin-right: -1.6rem; }
   .goal__img {
     display: flex;

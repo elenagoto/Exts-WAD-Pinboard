@@ -8,11 +8,11 @@
 <% end %>
 <div class="card__form">
   <div class="card__footer card--show">
-    <a class="btn btn--cta" href="<%= edit_pin_path(pin) %>"> 
+    <%= link_to edit_pin_path(pin), class: 'btn btn--cta' do %>
       <svg class="icon icon--cta" height="20" viewBox="0 0 24 24" width="20">
         <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#edit") %>"></use>
       </svg>
       Edit
-    </a>
+    <% end %>
   </div>
 </div>

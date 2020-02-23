@@ -62,6 +62,9 @@
               <p><%= @pin.tag %></p>
             </div>
             <div class="goal__stats">
+              <div class="stats__created">
+                <span>Created on <time datetime="<%= @pin.created_at %>"> <%= @pin.created_at.strftime("%d %b '%y") %></time></span>
+              </div>
               <div class="stats__doing">
                 <span><%= @pin.users.length %> loving this</span>
               </div>

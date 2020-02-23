@@ -3,7 +3,7 @@ require 'test_helper'
 class PinTest < ActiveSupport::TestCase
   test 'Create new pin' do
     pin = Pin.new user: User.new,
-                  title: 'This is a title for idea'
+                  title: 'This is a title for pin'
     pin.save!
 
     assert_equal Pin.first, pin
@@ -17,7 +17,7 @@ class PinTest < ActiveSupport::TestCase
 
   test 'Validation for tag too long' do
     pin = Pin.new user: User.new,
-                  title: 'This is a title for idea',
+                  title: 'This is a title for pin',
                   tag: 'This is a very long description of the pin'
     refute pin.valid?
   end
@@ -35,7 +35,7 @@ class PinTest < ActiveSupport::TestCase
                       title: 'Beautiful pin 2'
     pin_two.save!
 
-    assert_equal Pin.most_recent.length, 2
+    assert_equal 2, Pin.most_recent.length
     assert_equal Pin.most_recent.first, pin_two
   end
 

@@ -4,8 +4,9 @@
     <title>Pinboard</title>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600i,700&display=swap" rel="stylesheet">
+    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
@@ -60,5 +61,16 @@
       </div>
     </footer>
 <!-- END Footer -->
+<!-- Script -->
+    <script>
+      var searchField = document.querySelector(".search__field");
+
+      searchField.addEventListener('focus', (e) => {
+        searchField.parentElement.classList.add('focus');
+      })
+      searchField.addEventListener('blur', (e) => {
+        searchField.parentElement.classList.remove('focus');
+      })
+    </script>
   </body>
 </html>

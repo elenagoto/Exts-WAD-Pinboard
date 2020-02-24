@@ -23,11 +23,7 @@ class PinsTest < ApplicationSystemTestCase
     end
 
     visit root_path
-    Capybara.ignore_hidden_elements = false
-    assert page.has_content?('Default title for pin # 1')
-    assert page.has_content?('Default title for pin # 2')
-    assert page.has_content?('Default title for pin # 3')
-    Capybara.ignore_hidden_elements = true
+    assert page.has_css?('.card', count: 3)
   end
 
   test 'only most recent pins are loaded in the index' do
@@ -39,12 +35,12 @@ class PinsTest < ApplicationSystemTestCase
     end
 
     visit root_path
-    Capybara.ignore_hidden_elements = false
-    assert page.has_content?('Default title for pin # 4')
-    assert page.has_content?('Default title for pin # 6')
-    assert page.has_content?('Default title for pin # 8')
-    refute page.has_content?('Default title for pin # 1')
-    Capybara.ignore_hidden_elements = true
+    assert page.has_css?("h3", text: 'Default title for pin # 8', visible: :hidden)
+    assert page.has_css?('h3', text: 'Default title for pin # 8', visible: :hidden)
+    assert page.has_css?('h3', text: 'Default title for pin # 7', visible: :hidden)
+    assert page.has_css?('h3', text: 'Default title for pin # 3', visible: :hidden)
+    refute page.has_css?('h3', text: 'Default title for pin # 2', visible: :hidden)
+    refute page.has_css?('h3', text: 'Default title for pin # 1', visible: :hidden)
   end
 
   test 'validation for pin without a title' do

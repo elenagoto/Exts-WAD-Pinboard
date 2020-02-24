@@ -29,6 +29,10 @@
     padding: 1em;
     font-size: inherit;
     width: 100%;
+    
+    &:focus {
+      box-shadow: 0 0 5px $primary-color;
+    }
 
     &--warning {
       border: 1px solid $secondary-color;

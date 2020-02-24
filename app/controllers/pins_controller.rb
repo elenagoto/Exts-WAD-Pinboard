@@ -24,6 +24,7 @@ class PinsController < ApplicationController
     if @pin.save
       redirect_to root_path
     else
+      @user = User.find(session[:user_id])
       render 'new'
     end
   end

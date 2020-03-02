@@ -44,16 +44,22 @@
     padding: 1rem;
   }
   &__tag {
+    background-color: rgba(255, 252, 249, 0.5);
+    border-radius: 2rem;
     padding: 0 1rem;
   }
 
   @include desktop {
+    &__intro {
+      background-color: rgba(255, 252, 249, 0.5);
+    }
+
     &__title {
       background-color: transparent;
     }
 
-    &__intro {
-      background-color: rgba(255, 252, 249, 0.5);
+    &__tag {
+      background-color: transparent;
     }
 
     &--show {

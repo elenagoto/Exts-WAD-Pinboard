@@ -1,6 +1,8 @@
 # Pinboard
 
-This is the ***Introduction to Ruby on Rails*** project course. Third course project of the *EPFL Extension School* **Web Application Development Program**
+This is the **_Introduction to Ruby on Rails_** project course. Third course project of the _EPFL Extension School_ **Web Application Development Program**
+
+This project was developed by [_Laura Elena Gómez_](https://elenagoto.ch/), and was sumbmitted and approved in March 2020.
 
 ## Project Goals
 
@@ -8,7 +10,7 @@ This is the ***Introduction to Ruby on Rails*** project course. Third course pro
 
 A *Use*r indicates someone who _has_ identified themselves within the application by registering and logging in.
 
-A *Visitor* indicates anyone visiting the website that has not identified themselves by registering and logging in _as well as_ Users.
+A _Visitor_ indicates anyone visiting the website that has not identified themselves by registering and logging in _as well as_ Users.
 
 ### Option 1: Pin you images
 
@@ -33,18 +35,18 @@ Implement the following features in your application, that allow:
 
 The outlines above don't go into as much detail as previous course projects: this is to assess your ability to interpret the project brief and create the appropriate models, controllers, views, and routes based on the guidelines below. In particular, the project submission must demonstrate all aspects of developing with the Ruby on Rails framework taught in this course, including:
 
-* Use of views, partials, and layouts.
-* Use of the Rails asset pipeline for CSS rules and images (see `CSS, JavaScript and app design` below for guidance on what CSS rules you should use)
-* Use of the Rails router, including resources.
-* Use of controllers, controller actions and the application controller.
-* Use of models, associations, and validations.
-* Use of automated system and model tests.
-* Use of Active Record and database interactions.
-* Use of migrations and managing database table structures.
+- Use of views, partials, and layouts.
+- Use of the Rails asset pipeline for CSS rules and images (see `CSS, JavaScript and app design` below for guidance on what CSS rules you should use)
+- Use of the Rails router, including resources.
+- Use of controllers, controller actions and the application controller.
+- Use of models, associations, and validations.
+- Use of automated system and model tests.
+- Use of Active Record and database interactions.
+- Use of migrations and managing database table structures.
 
 It's also necessary to demonstrate the following principles of software development:
 
-* Good source control management with git.
-* Good code structure and reuse.
-* Good naming and organisation of automated tests.
-* Good code formatting throughout a project codebase.
+- Good source control management with git.
+- Good code structure and reuse.
+- Good naming and organisation of automated tests.
+- Good code formatting throughout a project codebase.

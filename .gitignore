@@ -149,4 +149,7 @@ build-iPhoneSimulator/
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
 
+.vscode/settings.json
+
 # End of https://www.gitignore.io/api/ruby,rails,macos
+
